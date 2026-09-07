@@ -15,9 +15,9 @@ spec:
     spec:
       containers:
         - name: product-service
-          image: 554608989879.dkr.ecr.ap-south-1.amazonaws.com/product-service:7c5fb5e54787935c0f1a9046e601230ef6f78511
+          image: 554608989879.dkr.ecr.ap-south-1.amazonaws.com/product-service:1.0
           ports:
-            - containerPort: 8080
+            - containerPort: 8082
           resources:
             requests:
               cpu: "100m"
@@ -28,12 +28,12 @@ spec:
           readinessProbe:
             httpGet:
               path: /
-              port: 8080
+              port: 8082
             initialDelaySeconds: 20
             periodSeconds: 10
           livenessProbe:
             httpGet:
               path: /
-              port: 8080
+              port: 8082
             initialDelaySeconds: 40
             periodSeconds: 20
