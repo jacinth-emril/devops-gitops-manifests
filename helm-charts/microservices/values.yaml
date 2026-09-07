@@ -1,0 +1,28 @@
+namespace: microservices
+
+userService:
+  name: user-service
+  replicas: 2
+  image:
+    repository: 554608989879.dkr.ecr.ap-south-1.amazonaws.com/user-service
+    tag: "1.0"
+  containerPort: 8081
+  servicePort: 80
+
+productService:
+  name: product-service
+  replicas: 2
+  image:
+    repository: 554608989879.dkr.ecr.ap-south-1.amazonaws.com/product-service
+    tag: "1.0"
+  containerPort: 8082
+  servicePort: 80
+
+orderService:
+  name: order-service
+  replicas: 2
+  image:
+    repository: 554608989879.dkr.ecr.ap-south-1.amazonaws.com/order-service
+    tag: "1.0"
+  containerPort: 8083
+  servicePort: 80
