@@ -15,7 +15,10 @@ spec:
     spec:
       containers:
         - name: user-service
-          image: 554608989879.dkr.ecr.ap-south-1.amazonaws.com/user-service:7c5fb5e54787935c0f1a9046e601230ef6f78511
+<<<<<<< HEAD
+=======
+          image: 554608989879.dkr.ecr.ap-south-1.amazonaws.com/user-service:1.0
+>>>>>>> 39585ed (Fix user-service image tag)
           ports:
             - containerPort: 8080
           resources:
