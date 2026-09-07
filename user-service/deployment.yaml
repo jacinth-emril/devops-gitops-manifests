@@ -17,7 +17,7 @@ spec:
         - name: user-service
           image: 554608989879.dkr.ecr.ap-south-1.amazonaws.com/user-service:1.0
           ports:
-            - containerPort: 8080
+            - containerPort: 8081
           resources:
             requests:
               cpu: "100m"
@@ -28,12 +28,12 @@ spec:
           readinessProbe:
             httpGet:
               path: /
-              port: 8080
+              port: 8081
             initialDelaySeconds: 20
             periodSeconds: 10
           livenessProbe:
             httpGet:
               path: /
-              port: 8080
+              port: 8081
             initialDelaySeconds: 40
             periodSeconds: 20
